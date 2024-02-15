@@ -8,6 +8,12 @@ settings = 0
 # settings config
 ASCII_Art = 1
 
+def start1():
+  print("starting game...")
+  time.sleep(1)
+  print("")
+  stat_thing = input("")
+
 #actual game
 def start():
   global start_screen, settings
@@ -17,6 +23,7 @@ def start():
     start__settings_input = input("Start the game? (type settings to enter settings and start/s to start) : ")
     print("")
     if start__settings_input.lower() == "start" or start__settings_input.lower() == "s":
+      start1()
       break
     elif start__settings_input.lower() == "settings" or start__settings_input.lower() == "setting":
       settings = 1
@@ -32,9 +39,9 @@ def start():
           if ui_input.lower() == "y" or ui_input.lower() == "yes" or ui_input.lower() == "yea" or ui_input.lower() == "ye":
             ASCII_Art = 1
       elif settings_select__input.lower() == "save" or settings_select__input.lower() == "save menu" or settings_select__input.lower() == "s":
-        pass
+        save_input = print("Currently there are no save menu option(s)")
       elif settings_select__input.lower() == "control" or settings_select__input.lower() == "controls" or settings_select__input.lower() == "s":
-        pass
+        print("Currently there are no control(s) settings")
       elif settings_select__input.lower() == "q" or settings_select__input.lower() == "quit" or settings_select__input.lower() == "x" or settings_select__input.lower() == "exit" or settings_select__input.lower() == "exit settings":
         settings = 0
       else:
